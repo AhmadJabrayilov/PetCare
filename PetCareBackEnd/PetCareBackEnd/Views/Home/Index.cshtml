@@ -1,0 +1,136 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <!-- !Main start -->
+    <section id="slider">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            @for (int i = 0;  i<Model.Slider.Count(); i++)
+            {
+                if (i==0)
+                {
+                    <div class="carousel-item active">
+                    <img src="~/assets/img/@Model.Slider.ElementAt(i).ImageUrl" class="d-block w-100 image1" alt="...">
+                    <div class="slider-content-1 d-flex flex-column justify-content-center text-center">
+                        <h4 class="slider-content-1-subtitle">@Model.Slider.ElementAt(i).Subtitle</h4>
+                        <h1 class="slider-content-1-title">@Model.Slider.ElementAt(i).Title</h1>
+                        <p class="slider-content-1-desc">@Model.Slider.ElementAt(i).Desc
+                        </p>
+                        <div class="slider-1-buttons">
+                            <a href="#" class="btn  slider-1-button-left me-4">Book Now</a>
+                            <a href="#" class="btn  slider-1-button-right">Learn More</a>
+                        </div>
+                    </div>
+                    </div>
+                }
+                else
+                {
+                         <div class="carousel-item ">
+                    <img src="~/assets/img/@Model.Slider.ElementAt(i).ImageUrl" class="d-block w-100" alt="...">
+                    <div class="slider-content-2 d-flex flex-column justify-content-center text-center">
+                        <h4 class="slider-content-2-subtitle">@Model.Slider.ElementAt(i).Subtitle</h4>
+                        <h1 class="slider-content-2-title">@Model.Slider.ElementAt(i).Title</h1>
+                        <p class="slider-content-2-desc">@Model.Slider.ElementAt(i).Desc</p>
+                        <div class="slider-1-buttons">
+                            <a href="#" class="btn  slider-1-button-left me-4">Book Now</a>
+                            <a href="#" class="btn  slider-1-button-right">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                }
+            }
+               
+           
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="sales">
+        <div class="container">
+          <div class="row">
+            <div class="sale-items d-flex">
+              <div class="col-lg-6">
+                <div class="sale-inputs">
+                  <input type="text" placeholder="      Your Name" /><br />
+                  <input type="email" placeholder="      Your Email" /><br />
+                  <input type="datetime" placeholder="      Reservayion Date" /><br />
+                  <input type="datetime" placeholder="      Reservayion Time" /><br />
+                  <input type="number" placeholder="      Select A Service" /><br />
+                  <button>Book Now</button>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="sales-content">
+                  <h5>Going for a vacation?</h5>
+                  <h1>Book For <span>Your Pet</span></h1>
+                  <p style="font-size: 1.4rem !important;">
+                    Labore vero lorem eos sed aliquy ipsum aliquy sed. Vero
+                    dolore dolore takima ipsum lorem rebum
+                  </p>
+                  <div class="sale-icons d-flex">
+                    <div class="col-lg-6">
+                      <div class="pet-icon d-flex">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <h4 class="ps-3">Pet Boarding</h4>
+                      </div>
+                      <p style="font-size: 1.4rem !important;">
+                        Diam amet eos at no eos sit lorem, amet rebum ipsum
+                        clita stet
+                      </p>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="pet-icon d-flex">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <h4 class="ps-3">Pet Boarding</h4>
+                      </div>
+                      <p style="font-size: 1.4rem !important;">
+                        Diam amet eos at no eos sit lorem, amet rebum ipsum
+                        clita stet
+                      </p>
+                    </div>
+                  </div>
+                  <div class="sale-icons d-flex">
+                    <div class="col-lg-6">
+                      <div class="pet-icon d-flex">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <h4 class="ps-3">Pet Boarding</h4>
+                      </div>
+                      <p style="font-size: 1.4rem !important;">
+                        Diam amet eos at no eos sit lorem, amet rebum ipsum
+                        clita stet
+                      </p>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="pet-icon d-flex">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <h4 class="ps-3">Pet Boarding</h4>
+                      </div>
+                      <p style="font-size: 1.4rem !important;">
+                        Diam amet eos at no eos sit lorem, amet rebum ipsum
+                        clita stet
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    
+    <!-- !Main end -->
+
